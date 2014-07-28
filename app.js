@@ -6,8 +6,7 @@ var main = function() {
         var new_comment = $("<p>").text($(".comment-input input").val());
 
         $(".comments").append(new_comment);
-
-
+        $(".comment-input input").val("");
     });
 };
 

@@ -1,5 +1,6 @@
 var main = function() {
     "use strict"
+var addComment = function() {
 
     $(".comment-input button").on("click", function(event) {
 
@@ -15,6 +16,7 @@ var main = function() {
         
         $(".comment-input input").val("");
               }
+};
     });
 
     $(".comment-input input").on("keypress", function(event) {

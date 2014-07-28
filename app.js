@@ -1,21 +1,12 @@
 var main = function() {
     "use strict"
-var addComment = function() {
 
-	if($(".comment-input input").val() !== "") {
+    var addComment = function() {
+        if ($(".comment-input input").val() !== "") {
+            var new_comment = $("<div>");
+            new_comment.append($("<span>").text($(".comment-input input").val()));
 
-        var new_comment = $("<p>").text($(".comment-input input").val());
-
-                    new_comment.hide();
-        
-        $(".comments").append(new_comment);
-         
-        new_comment.fadeIn();
-        
-        $(".comment-input input").val("");
-              }
-};
-
+            $(".comments").append(new_comment);
 
             var deleteButton = $("<button>");
             new_comment.append(deleteButton);
@@ -24,18 +15,21 @@ var addComment = function() {
             	$(this).parent().hide();
             });
 
+            new_comment.hide();
+            new_comment.fadeIn();
 
-    $(".comment-input button").on("click", function(event) {
+            $(".comment-input input").val("");
+        }
+    };
 
-    	addComment();
+    $(".comment-input button").click(function() {
+        addComment();
     });
 
-    $(".comment-input input").on("keypress", function(event) {
-     
-         if(event.keyCode == 13){
-    	  
-    	  addComment();
-    	}
+    $(".comment-input input").keypress(function() {
+        if (event.keyCode == 13) {
+            addComment();
+        }
     });
 };
 

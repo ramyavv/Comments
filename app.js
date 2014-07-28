@@ -17,7 +17,12 @@ var addComment = function() {
 };
 
 
+            var deleteButton = $("<button>");
+            new_comment.append(deleteButton);
 
+            deleteButton.click(function() {
+            	$(this).parent().hide();
+            });
 
 
     $(".comment-input button").on("click", function(event) {

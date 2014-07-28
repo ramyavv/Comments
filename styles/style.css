@@ -49,15 +49,15 @@ header p {
     float: right;
     width: 570px;
 }
-.comments p {
+.comments div {
     padding: 5px;
     margin-bottom: 10px;
     border-radius: 5px;
 }
-.comments p:nth-child(even) {
+.comments div:nth-child(even) {
     background: lavender;
 }
-.comments p:nth-child(odd) {
+.comments div:nth-child(odd) {
     background: gainsboro;
 }
 footer {

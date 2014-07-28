@@ -7,9 +7,11 @@ var main = function() {
 
         var new_comment = $("<p>").text($(".comment-input input").val());
 
+         if(event.keyCode == 13){
         $(".comments").append(new_comment);
         $(".comment-input input").val("");
               }
+          }
     });
 };
 
